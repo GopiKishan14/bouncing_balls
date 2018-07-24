@@ -1,8 +1,9 @@
 // define variable for ball count paragraph
-var para = document.querySelector('p');
+var para = document.getElementById("p1");
+var msg = document.getElementById("p2");
 var count = 0;
 
-// setup canvasvetegt
+// setup canvas
 
 var canvas = document.querySelector('canvas');
 var ctx = canvas.getContext('2d');
@@ -125,13 +126,13 @@ EvilCircle.prototype.checkBounds = function() {
 EvilCircle.prototype.setControls = function() {
   var _this = this;
   window.onkeydown = function(e) {
-    if(e.keyCode === 65) { // a
+    if(e.keyCode === 37) { // left
       _this.x -= _this.velX;
-    } else if(e.keyCode === 68) { // d
+    } else if(e.keyCode === 39) { // right
       _this.x += _this.velX;
-    } else if(e.keyCode === 87) { // w
+    } else if(e.keyCode === 38) { // up
       _this.y -= _this.velY;
-    } else if(e.keyCode === 83) { // s
+    } else if(e.keyCode === 40) { // down
       _this.y += _this.velY;
     }
   };
@@ -149,6 +150,7 @@ EvilCircle.prototype.collisionDetect = function() {
       if (distance < this.size + balls[j].size) {
         balls[j].exists = false;
         count--;
+        this.size += 1; 
         para.textContent = 'Ball count: ' + count;
       }
     }
@@ -198,7 +200,10 @@ function loop(){
     evil.draw();
     evil.checkBounds();
     evil.collisionDetect();
-
+    if(count===0){
+      para.textContent = "";
+     msg.textContent= "You should not have eaten them all, you hungry potato. Now see ,You are so lonely";
+    }
     requestAnimationFrame(loop);
 }
 
