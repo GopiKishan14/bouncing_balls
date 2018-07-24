@@ -200,6 +200,7 @@ function loop(){
     evil.draw();
     evil.checkBounds();
     evil.collisionDetect();
+    
     if(count===0){
       para.textContent = "";
      msg.textContent= "You should not have eaten them all, you hungry potato. Now see ,You are so lonely";
