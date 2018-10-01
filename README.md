@@ -8,6 +8,7 @@ Deep colors. Collisions. And you, a hungry circle that must devour all the balls
 ## Setup
 Clone the repository and open the index.html file in a web browser
 Simple as that!
+##
 Site published at https://gopikishan14.github.io/bouncing_balls/
 
 ## Contributing
