@@ -204,6 +204,8 @@ function loop(){
     if(count===0){
       para.textContent = "";
      msg.textContent= "You should not have eaten them all, you hungry potato. Now see ,You are so lonely";
+     alert("So that ends it! I think You refresh the page.");
+     return;
     }
     requestAnimationFrame(loop);
 }
