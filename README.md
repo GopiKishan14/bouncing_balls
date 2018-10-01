@@ -1,4 +1,4 @@
-# bouncing_balls
+# Bouncing Balls
 Welcome to a ball terminating game. 
 Are you ready?
 
