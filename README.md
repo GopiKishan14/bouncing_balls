@@ -1,6 +1,6 @@
 # Bouncing Balls
 Welcome to a ball terminating game. 
-Are you ready?
+Are you ready?///
 
 ## About
 Deep colors. Collisions. And you, a hungry circle that must devour all the balls
